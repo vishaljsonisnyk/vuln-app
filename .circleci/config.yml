@@ -54,7 +54,7 @@ jobs:
       - run:
           name: Snyk Test
           command: |
-            snyk version
+            snyk test
  
 workflows:
   tsm-bootcamp:
