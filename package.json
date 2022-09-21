@@ -128,7 +128,7 @@
     "tar": "^6.1.2",
     "uuid": "^8.3.2",
     "wrap-ansi": "^5.1.0",
-    "adm-zip": "0.4.7"
+    "adm-zip": "0.5.2"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.1",
