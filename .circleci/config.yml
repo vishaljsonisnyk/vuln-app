@@ -41,6 +41,7 @@ jobs:
             curl https://static.snyk.io/cli/latest/snyk-linux -o snyk
             chmod +x ./snyk
             sudo mv ./snyk /usr/local/bin/snyk
+            snyk auth $SNYK_TOKEN
           # {{ Use the circlci build logs to add the missing step to the snyk setup commands here }}
           # Pass the authentication token to snyk using the $SNYK_TOKEN environment variable
           # Never place a Snyk auth token directly in a pipeline configuration file
@@ -53,7 +54,7 @@ jobs:
       - run:
           name: Snyk Test
           command: |
-            snyk version
+            snyk test --severity-threshold=high --fail-on=upgradable
  
 workflows:
   tsm-bootcamp:
